@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Color Randomizer</title>
+
+    <script src="https://app.kontent.ai/js-api/custom-element/v1/custom-element.min.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+  </head>
+  <body>
+    <style>
+      .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .color-bg {
+        height: 10rem;
+        width: 10rem;
+      }
+    </style>
+
+    <!--
+    Note the use of Alpine "x-data" and other directives in the markup here.
+    To learn more about Alpine, go to https://alpinejs.dev/
+    -->
+    <div x-data="color" class="container">
+      <div class="color-bg" :style="{background: colorHex}"></div>
+      <p>Color Name: <span x-text="colorName"></span></p>
+      <button @click="getRandomColor" :disabled="disabled">Generate Random Color</button>
+    </div>
+
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>

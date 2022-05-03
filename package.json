@@ -1,0 +1,14 @@
+{
+  "name": "kontent-color-randomizer",
+  "version": "1.0.0",
+  "description": "A Kontent Custom Element for generating random color data",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BizStream",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
